@@ -27,7 +27,7 @@ $('document').ready(function(){
 		
 		$(this).fadeOut('slow').delay(2000).promise().done(function(){
 			$('#play').fadeIn('slow');
-			document.body.style.backgroundImage = "url('nidhi.jpg')";
+			document.body.style.backgroundImage = "url('nidhi.png')";
 		});
 		
 	});
