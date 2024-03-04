@@ -17,6 +17,8 @@ $('document').ready(function(){
 		});
 
 	$('#turn_on').click(function(){
+		var audio = $('.song')[0];
+        audio.play();
 		$('#bulb_yellow').addClass('bulb-glow-yellow');
 		$('#bulb_red').addClass('bulb-glow-red');
 		$('#bulb_blue').addClass('bulb-glow-blue');
@@ -32,9 +34,11 @@ $('document').ready(function(){
 		
 	});
 	$('#play').click(function(){
-		
-		var audio = $('.song')[0];
+		$('.song')[0].pause();
+		$('.song')[0].currentTime = 0;
+		var audio = $('.baaguntundhi')[0];
         audio.play();
+		
         $('#bulb_yellow').addClass('bulb-glow-yellow-after');
 		$('#bulb_red').addClass('bulb-glow-red-after');
 		$('#bulb_blue').addClass('bulb-glow-blue-after');
@@ -44,7 +48,7 @@ $('document').ready(function(){
 		$('body').css('backgroud-color','#FFF');
 		$('body').addClass('peach-after');
 		
-		$(this).fadeOut('slow').delay(6000).promise().done(function(){
+		$(this).fadeOut('slow').delay(1000).promise().done(function(){
 			$('#bannar_coming').fadeIn('slow');
 		});
 	});
@@ -145,6 +149,10 @@ $('document').ready(function(){
 
 		
 	$('#wish_message').click(function(){
+		$('.baaguntundhi')[0].pause();
+		$('.baaguntundhi')[0].currentTime = 0;
+		var audio = $('.ban')[0];
+        audio.play();
 		 vw = $(window).width()/2;
 
 		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
@@ -155,14 +163,14 @@ $('document').ready(function(){
 		$('#b5').attr('id','b55')
 		$('#b6').attr('id','b66')
 		$('#b7').attr('id','b77')
-		$('#b11').animate({top:240, left: vw-350},500);
+		$('#b11').animate({top:200, left: vw-350},500);
 		$('#b22').animate({top:240, left: vw-250},500);
 		$('#b33').animate({top:240, left: vw-150},500);
 		$('#b44').animate({top:240, left: vw-50},500);
 		$('#b55').animate({top:240, left: vw+50},500);
 		$('#b66').animate({top:240, left: vw+150},500);
 		$('#b77').animate({top:240, left: vw+250},500);
-		$('.balloons').css('opacity','0.9');
+		$('.balloons').css('opacity','1');
 		$('.balloons h2').fadeIn(3000);
 		$(this).fadeOut('slow').delay(3000).promise().done(function(){
 			$('#story').fadeIn('slow');
@@ -170,6 +178,10 @@ $('document').ready(function(){
 	});
 	
 	$('#story').click(function(){
+		$('.ban')[0].pause();
+		$('.ban')[0].currentTime = 0;
+		var audio = $('.dear')[0];
+        audio.play();
 		$(this).fadeOut('slow');
 		$('.cake').fadeOut('fast').promise().done(function(){
 			$('.message').fadeIn('slow');
